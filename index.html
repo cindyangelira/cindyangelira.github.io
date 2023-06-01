@@ -2,22 +2,48 @@
 <html>
 <head>
     <title>About Me</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 150px;
+            margin-right: 20px;
+        }
+
+        h1, h2 {
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <h1>About Me</h1>
-    <p>
-        Hi fellas! Welcome to my playground! I'm <strong>Cindy</strong>. I'm a data scientist (at least for now... cue mysterious music ... until my inevitable career switch to becoming a monarch, but that's a story for another day).
-    </p>
-    <img src="sjw.jpg" alt="Profile Picture">
+    <div class="container">
+        <div>
+            <h1>About Me</h1>
+            <p>
+                Hi fellas! Welcome to my playground! I'm <strong>Cindy</strong>. I'm a data scientist (at least for now... cue mysterious music ... until my inevitable career switch to becoming a monarch, but that's a story for another day).
+            </p>
 
-    <h2>Connect with Me</h2>
-    <ul>
-        <li>
-            <a href="https://github.com/cindyangelira">GitHub</a>
-        </li>
-        <li>
-            <a href="https://linkedin.com/in/cindy-btari">LinkedIn</a>
-        </li>
-    </ul>
+            <h2>Connect with Me</h2>
+            <ul>
+                <li>
+                    <a href="https://github.com/cindyangelira">GitHub</a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/cindy-btari">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+
+        <img class="profile-image" src="sjw.jpg" alt="Profile Picture">
+    </div>
 </body>
 </html>
