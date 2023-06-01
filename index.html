@@ -10,20 +10,39 @@
         }
 
         .container {
-            width: 600px;
-            height: 300px;
             display: flex;
             align-items: center;
         }
 
         .profile-image {
-            width: 300px;
-            height: 300px;
+            flex: 1;
+            height: auto;
+            max-width: 50%;
             margin-right: 20px;
+        }
+
+        .about-me {
+            flex: 1;
+            max-width: 50%;
         }
 
         h1, h2 {
             color: #39FF14;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .profile-image, .about-me {
+                max-width: 100%;
+            }
+
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -62,4 +81,6 @@
     </div>
 </body>
 </html>
+
+
 
