@@ -2,25 +2,25 @@
 const ProjectsSection = () => {
   const projects = [
     {
-      name: 'DATA_PIPELINE.ML',
-      description: 'Real-time ML pipeline processing 100K+ events/day',
-      tech: ['Python', 'Apache Kafka', 'TensorFlow', 'Docker'],
+      name: 'PII_DISCOVERY.ENGINE',
+      description: 'Architected and deployed a zero-to-production PII discovery engine from the ground up - solo. Built multi-modal detection pipelines combining classical ML, custom-trained YOLO for document layouts, transformer-based NER, and OCR preprocessing. Engineered data connectors for S3, PostgreSQL, MySQL, FTP with streaming ingestion capabilities. FastAPI microservices with PySpark for distributed processing. GDPR compliance logic handles right-to-be-forgotten requests across distributed storage with audit trails.',
+      tech: ['Python', 'YOLO', 'Transformers', 'FastAPI', 'PySpark', 'PostgreSQL', 'S3'],
       status: 'PRODUCTION',
       year: '2024'
     },
     {
-      name: 'CUSTOMER_INSIGHTS.AI',
-      description: 'Customer behavior prediction model with 94% accuracy',
-      tech: ['Scikit-learn', 'PostgreSQL', 'React', 'FastAPI'],
+      name: 'AI_GRAPH.CUSTOMER360',
+      description: 'Built an AI-powered graph-based Customer 360 analytics platform for banking. Neo4j knowledge graphs meet classical-to-transformer models meet real-time decisioning engines. Think customer behavior prediction, risk profiling, and regulatory compliance - all running on interconnected data relationships that traditional ML can\'t capture.',
+      tech: ['Neo4j', 'Python', 'Transformers', 'Banking APIs', 'Real-time ML'],
       status: 'DEPLOYED',
-      year: '2023'
+      year: '2024'
     },
     {
-      name: 'FORECAST_ENGINE.SYS',
-      description: 'Time series forecasting for supply chain optimization',
-      tech: ['R', 'Shiny', 'AWS', 'Prophet'],
-      status: 'ACTIVE',
-      year: '2023'
+      name: 'STEALTH_PROJECT.CLASSIFIED',
+      description: 'Satellite imagery disaster assessment systems, cryptocurrency trading algorithms, autonomous AI agents, and several research collaborations under NDA. Some projects push the boundaries of what\'s possible with current tech, others solve problems that don\'t officially exist yet. The interesting stuff usually can\'t be discussed in public.',
+      tech: ['Satellite Data', 'Crypto APIs', 'Autonomous Agents', 'Research Collab', 'NDA'],
+      status: 'CLASSIFIED',
+      year: '2023-2024'
     }
   ];
 
@@ -42,7 +42,8 @@ const ProjectsSection = () => {
                   <span className="font-pixel text-xs text-retro-yellow">{project.year}</span>
                   <div className={`w-2 h-2 ${
                     project.status === 'PRODUCTION' ? 'bg-retro-lime' :
-                    project.status === 'DEPLOYED' ? 'bg-retro-cyan' : 'bg-retro-yellow'
+                    project.status === 'DEPLOYED' ? 'bg-retro-cyan' : 
+                    project.status === 'CLASSIFIED' ? 'bg-retro-magenta' : 'bg-retro-yellow'
                   } animate-pulse`}></div>
                   <span className="font-pixel text-xs">{project.status}</span>
                 </div>
@@ -63,7 +64,7 @@ const ProjectsSection = () => {
           ))}
           
           <div className="mt-6 p-3 bg-black text-retro-lime font-pixel text-xs">
-            {'>'} DIR SCAN COMPLETE
+            {'>'}DIR SCAN COMPLETE
             <br />
             {'>'} {projects.length} PROJECT(S) FOUND
             <span className="blink">█</span>
