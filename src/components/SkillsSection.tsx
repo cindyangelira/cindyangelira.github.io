@@ -1,45 +1,35 @@
 
 const SkillsSection = () => {
-  const skills = [
-    { name: 'HTML/CSS', level: 95, color: '#ff6b6b' },
-    { name: 'JAVASCRIPT', level: 90, color: '#4ecdc4' },
-    { name: 'REACT', level: 85, color: '#45b7d1' },
-    { name: 'TYPESCRIPT', level: 80, color: '#96ceb4' },
-    { name: 'NODE.JS', level: 75, color: '#feca57' },
-    { name: 'DESIGN', level: 88, color: '#ff9ff3' },
-  ];
-
   return (
     <div className="retro-window p-6">
       <div className="retro-window-inset p-4">
-        <h2 className="font-pixel text-sm mb-4 text-retro-magenta">C:\SKILLS\ABILITIES.SYS</h2>
+        <h2 className="font-pixel text-sm mb-4 text-retro-magenta">C:\SKILLS\PHILOSOPHY.TXT</h2>
         <div className="space-y-4">
           <p className="font-pixel text-xs text-retro-lime mb-4">
-            SYSTEM ANALYSIS COMPLETE...
+            LOADING TECHNICAL PHILOSOPHY...
             <span className="blink">_</span>
           </p>
-          {skills.map((skill, index) => (
-            <div key={skill.name} className="space-y-2">
-              <div className="flex justify-between items-center">
-                <span className="font-pixel text-xs">{skill.name}</span>
-                <span className="font-pixel text-xs text-retro-cyan">{skill.level}%</span>
-              </div>
-              <div className="pixel-progress">
-                <div 
-                  className="pixel-progress-fill"
-                  style={{ 
-                    width: `${skill.level}%`,
-                    backgroundColor: skill.color,
-                    animationDelay: `${index * 0.2}s`
-                  }}
-                ></div>
-              </div>
+          
+          <div className="border-l-2 border-retro-cyan pl-4">
+            <div className="font-pixel text-xs leading-relaxed space-y-4">
+              <p>
+                IN DATA SCIENCE, YOU BUILD WITH WHATEVER SOLVES THE PROBLEM. 
+                PROJECTS SPAN THE FULL TECHNICAL SPECTRUM - BACKEND ML PIPELINES, 
+                CLOUD INFRASTRUCTURE, FRONTEND INTERFACES.
+              </p>
+              <p className="text-retro-cyan">
+                TECHNOLOGY STACK ADAPTS TO THE CHALLENGE, NOT THE OTHER WAY AROUND.
+              </p>
+              <p className="text-retro-yellow">
+                STACK-AGNOSTIC BY NECESSITY, POLYGLOT BY DESIGN.
+              </p>
             </div>
-          ))}
+          </div>
+          
           <div className="mt-6 p-3 bg-black text-retro-lime font-pixel text-xs">
-            > SKILL_LOADER.EXE COMPLETED SUCCESSFULLY
+            {'>'} PHILOSOPHY.TXT LOADED SUCCESSFULLY
             <br />
-            > ALL SYSTEMS OPERATIONAL
+            {'>'} MINDSET: SOLUTION-ORIENTED
             <span className="blink">█</span>
           </div>
         </div>

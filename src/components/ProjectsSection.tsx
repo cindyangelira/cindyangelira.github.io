@@ -2,71 +2,70 @@
 const ProjectsSection = () => {
   const projects = [
     {
-      id: 1,
-      name: 'RETRO_GAME.EXE',
-      description: 'A nostalgic pixel-art game built with modern web technologies',
-      tech: ['JS', 'HTML5', 'CSS3'],
-      status: 'COMPLETED',
-      icon: '🎮'
+      name: 'DATA_PIPELINE.ML',
+      description: 'Real-time ML pipeline processing 100K+ events/day',
+      tech: ['Python', 'Apache Kafka', 'TensorFlow', 'Docker'],
+      status: 'PRODUCTION',
+      year: '2024'
     },
     {
-      id: 2,
-      name: 'PORTFOLIO_V2.ZIP',
-      description: 'Modern portfolio website with 90s aesthetic vibes',
-      tech: ['REACT', 'TS', 'TAILWIND'],
-      status: 'IN_PROGRESS',
-      icon: '💻'
+      name: 'CUSTOMER_INSIGHTS.AI',
+      description: 'Customer behavior prediction model with 94% accuracy',
+      tech: ['Scikit-learn', 'PostgreSQL', 'React', 'FastAPI'],
+      status: 'DEPLOYED',
+      year: '2023'
     },
     {
-      id: 3,
-      name: 'API_MANAGER.BAT',
-      description: 'RESTful API management tool with retro terminal interface',
-      tech: ['NODE', 'EXPRESS', 'MONGO'],
-      status: 'PLANNING',
-      icon: '🔧'
+      name: 'FORECAST_ENGINE.SYS',
+      description: 'Time series forecasting for supply chain optimization',
+      tech: ['R', 'Shiny', 'AWS', 'Prophet'],
+      status: 'ACTIVE',
+      year: '2023'
     }
   ];
 
   return (
     <div className="retro-window p-6">
       <div className="retro-window-inset p-4">
-        <h2 className="font-pixel text-sm mb-4 text-retro-magenta">C:\PROJECTS\SHOWCASE.DIR</h2>
+        <h2 className="font-pixel text-sm mb-4 text-retro-magenta">C:\PROJECTS\PORTFOLIO.DIR</h2>
         <div className="space-y-4">
           <p className="font-pixel text-xs text-retro-lime mb-4">
-            SCANNING PROJECT DIRECTORY...
+            SCANNING DIRECTORY...
             <span className="blink">_</span>
           </p>
-          {projects.map((project) => (
-            <div key={project.id} className="retro-window p-4">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">{project.icon}</span>
-                <div className="flex-1">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-pixel text-xs text-retro-cyan">{project.name}</h3>
-                    <span className={`font-pixel text-xs px-2 py-1 ${
-                      project.status === 'COMPLETED' ? 'bg-retro-lime text-black' :
-                      project.status === 'IN_PROGRESS' ? 'bg-retro-yellow text-black' :
-                      'bg-retro-magenta text-white'
-                    }`}>
-                      {project.status}
-                    </span>
-                  </div>
-                  <p className="font-pixel text-xs leading-relaxed mb-3">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span key={tech} className="font-pixel text-xs bg-retro-dark-gray text-white px-2 py-1">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+          
+          {projects.map((project, index) => (
+            <div key={project.name} className="retro-window-inset p-3 space-y-2">
+              <div className="flex justify-between items-start">
+                <h3 className="font-pixel text-xs text-retro-cyan">{project.name}</h3>
+                <div className="flex items-center gap-2">
+                  <span className="font-pixel text-xs text-retro-yellow">{project.year}</span>
+                  <div className={`w-2 h-2 ${
+                    project.status === 'PRODUCTION' ? 'bg-retro-lime' :
+                    project.status === 'DEPLOYED' ? 'bg-retro-cyan' : 'bg-retro-yellow'
+                  } animate-pulse`}></div>
+                  <span className="font-pixel text-xs">{project.status}</span>
                 </div>
+              </div>
+              
+              <p className="font-pixel text-xs leading-relaxed">
+                {project.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-1">
+                {project.tech.map((tech) => (
+                  <span key={tech} className="bg-retro-dark-gray px-2 py-1 font-pixel text-xs border border-black">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
-          <div className="mt-4 p-3 bg-black text-retro-lime font-pixel text-xs">
-            > {projects.length} PROJECT(S) LOADED
+          
+          <div className="mt-6 p-3 bg-black text-retro-lime font-pixel text-xs">
+            {'>'} DIR SCAN COMPLETE
             <br />
-            > TYPE 'VIEW [PROJECT_NAME]' FOR DETAILS
+            {'>'} {projects.length} PROJECT(S) FOUND
             <span className="blink">█</span>
           </div>
         </div>
