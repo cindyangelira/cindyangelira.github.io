@@ -70,7 +70,7 @@ const Index = () => {
         <footer className="retro-window p-4 text-center">
           <div className="flex justify-between items-center">
             <div className="font-pixel text-xs">
-              © 2024 RETRO.PORTFOLIO
+              © 2025 RETRO.PORTFOLIO
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-retro-lime animate-pulse"></div>
