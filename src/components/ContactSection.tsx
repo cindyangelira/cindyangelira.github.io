@@ -22,7 +22,7 @@ const ContactSection = () => {
     email: { text: 'EMAIL: cindybtari@gmail.com', link: 'mailto:cindybtari@gmail.com' },
     linkedin: { text: 'LINKEDIN: https://www.linkedin.com/in/cindyab/', link: 'https://www.linkedin.com/in/cindyab/' },
     github: { text: 'GITHUB: @cindyangelira', link: 'https://github.com/cindyangelira' },
-    twitter: { text: 'TWITTER: @hiddenlayerr', link: 'https://twitter.com/hiddenlayerr' },
+    twitter: { text: 'TWITTER: @thehiddenlayerr', link: 'https://twitter.com/thehiddenlayerr' },
     help: [
       'Available commands:',
       '  EMAIL    - Display email address',
@@ -87,10 +87,10 @@ const ContactSection = () => {
           GITHUB: <a href="https://github.com/cindyangelira" target="_blank" rel="noopener noreferrer" className="text-retro-cyan underline hover:text-retro-yellow cursor-pointer">@cindyangelira</a>
         </div>
       );
-    } else if (command === 'twitter' && line.includes('hiddenlayerr')) {
+    } else if (command === 'twitter' && line.includes('thehiddenlayerr')) {
       return (
         <div key={index} className="text-retro-lime">
-          TWITTER: <a href="https://twitter.com/hiddenlayerr" target="_blank" rel="noopener noreferrer" className="text-retro-cyan underline hover:text-retro-yellow cursor-pointer">@hiddenlayerr</a>
+          TWITTER: <a href="https://twitter.com/thehiddenlayerr" target="_blank" rel="noopener noreferrer" className="text-retro-cyan underline hover:text-retro-yellow cursor-pointer">@thehiddenlayerr</a>
         </div>
       );
     }
