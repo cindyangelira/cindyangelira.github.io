@@ -9,6 +9,8 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    sourcemap: false,
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         assetFileNames: 'assets/[name]-[hash][extname]',
@@ -24,9 +26,8 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
+    ...(mode === 'development' ? [componentTagger()] : []),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
