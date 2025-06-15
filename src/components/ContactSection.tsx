@@ -108,7 +108,7 @@ const ContactSection = () => {
         <div className="bg-black p-4 font-pixel text-xs h-64 overflow-y-auto">
           {output.map((line, index) => renderLine(line, index))}
           <form onSubmit={handleSubmit} className="flex items-center mt-2">
-            <span className="text-retro-cyan">> </span>
+            <span className="text-retro-cyan">&gt; </span>
             <input
               type="text"
               value={input}
