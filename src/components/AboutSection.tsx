@@ -12,23 +12,16 @@ const AboutSection = () => {
           </div>
           <div className="font-pixel text-xs leading-relaxed space-y-4">
             <p className="text-retro-lime">
-              > LOADING USER PROFILE...
+              {'>'} LOADING USER PROFILE...
               <span className="blink">_</span>
             </p>
             <p>
-              HELLO WORLD! I'M A PASSIONATE DEVELOPER WHO LOVES CREATING 
-              DIGITAL EXPERIENCES THAT BLEND NOSTALGIA WITH MODERN FUNCTIONALITY.
+              DATA SCIENTIST & BUSINESS SOLUTION ARCHITECT - STILL CODING, 
+              STILL BUILDING MODELS, BUT NOW I ALSO DECIDE WHICH AI PROBLEMS 
+              ARE WORTH SOLVING AND MAKE SURE THEY ACTUALLY GET SOLVED RIGHT.
             </p>
             <p className="text-retro-cyan">
-              SPECIALIZING IN:
-              <br />
-              - FRONTEND DEVELOPMENT
-              <br />
-              - UI/UX DESIGN  
-              <br />
-              - RETRO AESTHETICS
-              <br />
-              - PIXEL PERFECT CODE
+              EXPERIENCE: 5+ YEARS TURNING DATA INTO INSIGHTS AND STRATEGY INTO WORKING SOLUTIONS.
             </p>
             <p className="text-retro-yellow">
               STATUS: READY TO COLLABORATE
